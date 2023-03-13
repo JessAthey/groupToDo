@@ -12,33 +12,23 @@ let todoInput = document.getElementById("todo-input");
 let addTodoButton = document.querySelector("button[type='submit']");
 
 
-addTodoButton.addEventListener("click", function(event) {
+addTodoButton.addEventListener("click", function (event) {
+  event.preventDefault();
 
- event.preventDefault();
+  let newTodo = {
+    title: todoInput.value,
 
+    isCompleted: false,
 
-let newTodo = {
+    isStarted: false,
 
+    dateAdded: new Date(),
 
+    ItemId: toDoList.length,
+  };
 
-
-title: todoInput.value,
-
- isCompleted:false, 
-
- isStarted:false, 
-
-
-dateAdded: new Date(),
-
-ItemId: toDoList.length
-
-};
-
-addToDoItem(newTodo);
-todoInput.value = "";
-
-
+  addToDoItem(newTodo);
+  todoInput.value = "";
 });
 
 function renderTodoList() {
