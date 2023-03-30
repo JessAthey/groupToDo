@@ -3,9 +3,28 @@ body {
     padding: 0;
 }
 
+.titleHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
 .myForm {
     width: 30%;
     margin: 1rem;
+    line-height: 2rem;
+}
+
+.addBtn {
+    height: 4rem;
+    width: 5rem;
+}
+
+#todo-form {
+    display: flex;
+    justify-content: center;
 }
 
 li {
@@ -14,4 +33,17 @@ li {
 
 span {
     margin-left: 1rem;
+}
+
+.deleteBtn {
+    border-radius: 3rem;
+    border: none;
+    height: 3rem;
+    background-color: #AFE1AF;
+    margin: 1rem;
+}
+
+.deleteBtn:hover {
+    background-color: palegreen;
+    transition: background-color 0.8s ease;
 }
